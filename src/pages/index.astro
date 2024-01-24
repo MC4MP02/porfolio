@@ -1,21 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Presentation from "../components/Presentation.astro";
 ---
 
 <Layout title="Porfolio de Marc Campo Cabrera">
-	<main>
-		<h1>Marc Campo Cabrera</h1>
-	</main>
+  <main>
+    <Presentation />
+  </main>
 </Layout>
 
 <style>
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-		color: #fff;
-	}
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
 </style>
