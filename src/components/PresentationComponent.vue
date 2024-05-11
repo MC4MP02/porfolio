@@ -3,7 +3,8 @@
 <template>
     <div id="foto">
         <img id="foto-marc" src="/public/img/fotoMarc.jpg" alt="marc foto" />
-        <a href="https://www.linkedin.com/in/marc-campo-363522264/" target="_blank">
+        <a href="https://www.linkedin.com/in/marc-campo-363522264/" target="_blank"
+            class="flex items-center transition md:justify-center md:hover:scale-105">
             <p>Disponible para trabajar</p>
         </a>
     </div>

@@ -22,48 +22,22 @@ export default {
 </script>
 
 <template>
-  <main class="w-full bg-none m-0 p-0 flex flex-wrap flex-col justify-around overflow-auto">
+  <main class="w-full bg-none m-0 p-0 flex flex-wrap flex-col justify-around overflow-auto px-4">
     <div id="header" class="z-999 w-full box-border top-0 fixed">
       <AppHeader />
     </div>
-    <div id="inicio" class="flex flex-col justify-start w-1/2 box-border mr-auto ml-auto mt-[8%] align-start">
+    <div id="inicio"
+      class="flex flex-col justify-start box-border w-full mx-auto align-start py-16 md:py-36 lg:max-w-4xl md:max-w-2xl container">
       <Presentation />
     </div>
-    <div id="proyectos" class="flex items-center justify-center">
+    <div id="proyectos"
+      class="flex flex-col items-center justify-center gap-3 w-full mx-auto mt-[8%] container lg:max-w-4xl md:max-w-2xl scroll-m-20">
       <Projects />
     </div>
-    <!-- <div id="experiencia">
+    <!-- <div id="experiencia class="ml-auto mr-auto mt-[8%]"">
       <Experiencia />
     </div> -->
   </main>
 </template>
 
-<style scoped>
-#proyectos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 10px;
-  align-items: left;
-  width: 100%;
-  box-sizing: border-box;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8%;
-}
-
-#experiencia {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8%;
-}
-</style>
+<style scoped></style>

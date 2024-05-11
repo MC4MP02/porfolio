@@ -54,15 +54,16 @@ export default {
 </script>
 
 <template>
-    <h1>Proyectos</h1>
-    <div id="projects-grid">
-        <div v-for="project in projects" :key="project.title" class="project-grid" @mouseover="enlargeProject"
-            @mouseout="resetProjectSize">
-            <div id="foto-project">
+    <h1 class="flex items-start mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">Proyectos</h1>
+    <div id="projects-grid" class="text-[#acb1ba] flex flex-col gap-y-16">
+        <div v-for="project in projects" :key="project.title"
+            class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+            @mouseover="enlargeProject" @mouseout="resetProjectSize">
+            <div id="foto-project" class="w-full md:w-1/2">
                 <img :src="project.img" alt="project image" />
             </div>
-            <div id="info-project">
-                <h2>{{ project.title }}</h2>
+            <div id="info-project" class="w-full md:w-1/2 md:max-w-lg">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{{ project.title }}</h2>
                 <p>{{ project.description }}</p>
                 <a :href="project.url" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30%" height="30%" viewBox="0 0 24 24"
@@ -81,35 +82,6 @@ export default {
 </template>
 
 <style scoped>
-h1 {
-    color: white;
-    font-size: 3.5vh;
-    display: flex;
-    width: 50%;
-    margin: auto;
-}
-
-#info-project {
-    width: 60%;
-    margin-left: 1vw;
-}
-
-#foto-project {
-    width: 40%;
-}
-
-#projects-grid {
-    color: #acb1ba;
-    margin: 1vw;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    align-items: center;
-    justify-content: space-between;
-    justify-items: center;
-    gap: 40px;
-}
-
 .project-grid {
     display: flex;
     flex-direction: row;
