@@ -22,8 +22,8 @@ export default {
 </script>
 
 <template>
-  <main class="w-full bg-none m-0 p-0 flex flex-wrap flex-col justify-around overflow-auto px-4">
-    <div id="header" class="z-999 w-full box-border top-0 fixed">
+  <main class="w-full bg-none m-0 p-0 flex flex-wrap flex-col justify-around overflow-auto px-4 relative">
+    <div id="header" class="fixed top-0 left-0 right-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
       <AppHeader />
     </div>
     <div id="inicio"
