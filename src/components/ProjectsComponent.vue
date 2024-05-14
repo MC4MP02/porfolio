@@ -54,119 +54,43 @@ export default {
 </script>
 
 <template>
-    <h1 class="flex items-start mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">Proyectos</h1>
+    <h1 class="flex mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white w-full items-center">
+        <svg class="size-8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M7 8l-4 4l4 4"></path>
+            <path d="M17 8l4 4l-4 4"></path>
+            <path d="M14 4l-4 16"></path>
+        </svg>
+        Proyectos
+    </h1>
     <div id="projects-grid" class="text-[#acb1ba] flex flex-col gap-y-16">
         <div v-for="project in projects" :key="project.title"
             class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
             @mouseover="enlargeProject" @mouseout="resetProjectSize">
             <div id="foto-project" class="w-full md:w-1/2">
-                <img :src="project.img" alt="project image" />
+                <img :src="project.img" alt="project image" class="rounded-md h-45 w-full" />
             </div>
             <div id="info-project" class="w-full md:w-1/2 md:max-w-lg">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100">{{ project.title }}</h2>
-                <p>{{ project.description }}</p>
-                <a :href="project.url" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30%" height="30%" viewBox="0 0 24 24"
-                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                        <path
-                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
-                        </path>
-                    </svg>
-                    Code
-                </a>
+                <h2 class="text-2xl font-bold text-gray-100">{{ project.title }}</h2>
+                <p class="mt-5">{{ project.description }}</p>
+                <div class="mt-6">
+                    <a :href="project.url" target="_blank"
+                        class="inline-flex p-1.5 hover:bg-gray-600 bg-gray-800 border border-gray-600 rounded-md w-auto text-base text-white items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-6" width="36px" height="36px"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path
+                                d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                            </path>
+                        </svg>
+                        Code
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
-<style scoped>
-.project-grid {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    overflow: hidden;
-    transition: transform 0.3s ease-out;
-}
-
-.enlarged {
-    transform: scale(1.03);
-}
-
-.project-grid>div>img {
-    grid-area: img;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    border: 0.22vh solid #555;
-    box-shadow: 0.87vh 0.87vh 1vh rgba(0, 0, 0, 0.3);
-    border-radius: 1vh;
-
-}
-
-.project-grid>div>h2 {
-    grid-area: h2;
-    color: #f3f4f6;
-    margin: auto;
-    font-size: 2.8vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-}
-
-.project-grid>div>p {
-    grid-area: p;
-    margin: auto;
-    font-size: 1.75vh;
-    padding-top: 1vh;
-    padding-bottom: 2.5vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-}
-
-.project-grid>div>a {
-    display: flex;
-    width: 15%;
-    align-items: center;
-    justify-content: center;
-    grid-area: a;
-    text-decoration: none;
-    color: #fef08a;
-    font-size: 2.3vh;
-    font-size: 100%;
-    border: 0.22vh solid #555;
-    border-radius: 0.62vw;
-    padding: 1.5%;
-    margin-left: 3%;
-    margin-top: 3%;
-}
-
-#info-projects>a>svg {
-    width: 15%;
-}
-
-@media (max-width: 1000px) {
-    .project-grid {
-        flex-direction: column;
-    }
-
-    #foto-project>img {
-        width: 130%;
-    }
-
-    #info-project {
-        width: 80%;
-        margin-top: 0;
-    }
-}
-
-@media (max-width: 550px) {
-    #info-project>p {
-        display: none;
-    }
-
-    #projects-grid {}
-}
-</style>
+<style scoped></style>

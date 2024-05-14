@@ -2,13 +2,13 @@
 import Header from './components/HeaderComponent.vue'
 import Presentation from './components/PresentationComponent.vue'
 import Projects from './components/ProjectsComponent.vue'
-//import Experiencia from './components/ExperienciaComponent.vue'
+import Experiencia from './components/ExperienciaComponent.vue'
 
 export default {
   components: {
     AppHeader: Header,
     Presentation,
-    //Experiencia,
+    Experiencia,
     Projects
   },
   data() {
@@ -27,16 +27,17 @@ export default {
       <AppHeader />
     </div>
     <div id="inicio"
-      class="flex flex-col justify-start box-border w-full mx-auto align-start py-16 md:py-36 lg:max-w-4xl md:max-w-2xl container">
+      class="flex flex-col justify-start box-border w-full mx-auto align-start py-16 md:py-28 lg:max-w-4xl md:max-w-2xl container">
       <Presentation />
+    </div>
+    <div id="experiencia"
+      class="flex flex-col items-center justify-start gap-3 w-full mx-auto mt-[8%] lg:max-w-4xl md:max-w-2xl scroll-m-20 container">
+      <Experiencia />
     </div>
     <div id="proyectos"
       class="flex flex-col items-center justify-center gap-3 w-full mx-auto mt-[8%] container lg:max-w-4xl md:max-w-2xl scroll-m-20">
       <Projects />
     </div>
-    <!-- <div id="experiencia class="ml-auto mr-auto mt-[8%]"">
-      <Experiencia />
-    </div> -->
   </main>
 </template>
 
