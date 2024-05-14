@@ -13,7 +13,7 @@
         Experiencia
     </h1>
     <div class="flex flex-row">
-        <ol class="relative mt-16">
+        <ol class="relative mt-8">
             <li class="">
                 <div
                     class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]">
