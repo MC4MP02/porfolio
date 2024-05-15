@@ -1,7 +1,27 @@
-# Vue 3 + Vite
+# Portfolio de Marc Campo
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Repositorio en GitHub
+- **Nombre del repositorio:** MC4MP02/porfolio
+- **Descripción:** Este repositorio contiene el código fuente del portfolio de Marc Campo. Utiliza la herramienta Astro para construir una aplicación web.
 
-## Recommended IDE Setup
+## Página Web
+- **URL de la página:** Portfolio de Marc Campo
+- **Descripción:** La página web es el resultado final del proyecto. Aquí, Marc muestra su trabajo, habilidades y experiencia.
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+## Estructura del Proyecto
+Dentro del proyecto Astro, encontrarás las siguientes carpetas y archivos:
+- `/public/`: Contiene el archivo `favicon.svg` y otros recursos estáticos.
+- `/src/`: Aquí se encuentran los componentes y páginas del sitio.
+  - `/src/components/`: Contiene componentes como `Card.astro`.
+  - `/src/layouts/`: Incluye el diseño base (`Layout.astro`).
+  - `/src/pages/`: Contiene la página principal (`index.astro`).
+
+## Comandos
+Todos los comandos se ejecutan desde la raíz del proyecto:
+- `npm install`: Instala las dependencias.
+- `npm run dev`: Inicia el servidor local en `localhost:4321`.
+- `npm run build`: Genera la versión de producción en la carpeta `./dist/`.
+- `npm run preview`: Previsualiza la versión de producción antes de implementarla.
+- `npm run astro ...`: Ejecuta comandos adicionales con la herramienta Astro.
+
+Para obtener más información, consulta la documentación de Astro. ¡Buena suerte con tu proyecto! 😊🚀
